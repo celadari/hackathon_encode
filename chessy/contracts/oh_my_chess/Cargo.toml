@@ -1,0 +1,28 @@
+[package]
+name = "oh_my_chess"
+version = "0.1.0"
+authors = ["Charles LADARI"]
+edition = "2021"
+
+[dependencies]
+ink = { version = "4.2", default-features = false }
+
+scale = { package = "parity-scale-codec", version = "3", default-features = false, features = ["derive"] }
+scale-info = { version = "2", default-features = false, features = ["derive"], optional = true }
+pink = { version = "0.4.1", default-features = false }
+mongodb = { version = "2.8.0" }
+pink-extension = { version = "0.5.1", default-features = false }
+
+[lib]
+name = "oh_my_chess"
+path = "src/lib.rs"
+
+[features]
+default = ["std"]
+std = [
+    "ink/std",
+    "scale/std",
+    "scale-info/std",
+    "pink-extension/std",
+]
+ink-as-dependency = []
