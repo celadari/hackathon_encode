@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "@astar-network/swanky-cli": "^3.1.0",
-    "@phala/swanky-plugin-phala": "^0.1.16"
+    "@devphase/cli": "~0.6"
   }
 }

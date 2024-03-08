@@ -6,11 +6,12 @@ edition = "2021"
 
 [dependencies]
 ink = { version = "4.2", default-features = false }
-
+serde = { version = "1.0", default-features = false, features = ["derive"] }
 scale = { package = "parity-scale-codec", version = "3", default-features = false, features = ["derive"] }
 scale-info = { version = "2", default-features = false, features = ["derive"], optional = true }
 pink = { version = "0.4.1", default-features = false }
 mongodb = { version = "2.8.0" }
+serde-json-core = { version = "0.4" }
 pink-extension = { version = "0.5.1", default-features = false }
 
 [lib]
@@ -23,6 +24,8 @@ std = [
     "ink/std",
     "scale/std",
     "scale-info/std",
+    "pink/std",
     "pink-extension/std",
+    "serde-json-core/std"
 ]
 ink-as-dependency = []
